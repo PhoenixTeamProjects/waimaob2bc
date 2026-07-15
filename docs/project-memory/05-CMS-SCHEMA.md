@@ -11,7 +11,7 @@
 - courses：课程与培训服务；未确认前不得公开价格、班期、学员反馈或效果承诺。
 - media_coverage：媒体资料，必须等待真实素材。
 - trust_metrics：可信数据，必须可追溯，不得编造。
-- contact_submissions：咨询表单提交。
+- contact_submissions：咨询表单提交；字段至少包括称呼、公司/团队、联系方式、咨询类型、具体问题、来源、状态、备注和隐私标记。
 - navigation：导航配置，前台当前先使用代码集中配置。
 - site_settings：网站设置，包含 Logo、Favicon、头像、默认 SEO、OG 图片、联系方式、社交账号、页脚与分析验证信息。
 

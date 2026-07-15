@@ -1,3 +1,4 @@
+import { ContactPageContent } from '@/components/ui/ContactPageContent';
 import { ProjectIndexPage } from '@/components/ui/ProjectIndexPage';
 import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
 import { TrainingIndexPage } from '@/components/ui/TrainingIndexPage';
@@ -83,25 +84,7 @@ export default async function EnglishCatchAllPage({
   }
 
   if (path === '/contact/') {
-    return (
-      <RouteLandingPage
-        locale="en"
-        page={{
-          path,
-          eyebrow: 'Contact',
-          title: 'Contact Phoenix',
-          description:
-            'Suitable topics include foreign-trade practice, AI practice, website building, corporate training, one-on-one consulting and business cooperation.',
-          points: [
-            'Foreign trade course',
-            'AI practice course',
-            'Website course',
-            'Corporate training',
-            'One-on-one consulting'
-          ]
-        }}
-      />
-    );
+    return <ContactPageContent locale="en" />;
   }
 
   if (path === '/projects/') {

@@ -34,6 +34,15 @@ export type CourseTypeKey =
   | 'corporate'
   | 'consulting';
 
+export type InquiryTypeKey =
+  | 'course'
+  | 'corporate-training'
+  | 'one-on-one'
+  | 'website'
+  | 'ai-practice'
+  | 'foreign-trade'
+  | 'cooperation';
+
 export type LocalizedValue<T> = Record<Locale, T>;
 
 export interface Topic {
@@ -134,4 +143,18 @@ export interface Course {
   modules: string[];
   notes: string;
   locale: Locale;
+}
+
+export interface InquiryOption {
+  key: InquiryTypeKey;
+  label: LocalizedValue<string>;
+  description: LocalizedValue<string>;
+}
+
+export interface ContactField {
+  name: string;
+  label: LocalizedValue<string>;
+  placeholder: LocalizedValue<string>;
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select';
+  required: boolean;
 }
