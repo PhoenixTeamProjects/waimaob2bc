@@ -6,7 +6,7 @@ import { profile } from '@/data/profile';
 import { getPosts } from '@/lib/content/posts';
 
 export default function HomePage() {
-  const latestPosts = getPosts().slice(0, 3);
+  const latestPosts = getPosts('zh').slice(0, 3);
 
   return (
     <>
@@ -14,14 +14,12 @@ export default function HomePage() {
         <Container>
           <p className="eyebrow">Phoenix 个人品牌网站</p>
           <h1>{siteConfig.title}</h1>
-          <p className="hero-lead">
-            {profile.heroStatements.join(' ')}
-          </p>
+          <p className="hero-lead">{profile.heroStatements.join(' ')}</p>
           <div className="hero-actions">
             <Link className="button primary" href="/blog/">
               看实战内容
             </Link>
-            <Link className="button ghost" href="/contact/">
+            <Link className="button ghost" href="/contact/?type=course">
               课程与咨询
             </Link>
           </div>
@@ -46,7 +44,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="我仍然在一线做外贸"
             title="很多外贸课程来自过去，我的内容来自今天"
-            description="Phoenix 长期参与客户开发、平台运营、独立站、海关数据、海外社媒、AI 和 SOHO 项目。本网站记录正在发生的真实工作、问题、调整和复盘。"
+            description="Phoenix 长期参与客户开发、平台运营、独立站、海关数据、海外社媒、AI 和 SOHO 项目。本站记录正在发生的真实工作、问题、调整和复盘。"
           />
           <div className="card-grid">
             {topics.map((topic) => (
@@ -87,11 +85,13 @@ export default function HomePage() {
             {latestPosts.map((post) => (
               <article className="post-card" key={post.slug}>
                 <p className="meta">
-                  {post.type} · {post.readingMinutes} 分钟阅读
+                  {post.typeLabel} · {post.readingMinutes} 分钟阅读
                 </p>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
-                <Link href="/blog/">查看文章</Link>
+                <Link className="text-link" href={`/blog/${post.slug}/`}>
+                  查看文章
+                </Link>
               </article>
             ))}
           </div>

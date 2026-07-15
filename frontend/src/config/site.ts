@@ -13,7 +13,7 @@ export const topics: Topic[] = [
   {
     key: 'foreign-trade-ops',
     title: '外贸运营',
-    href: '/blog/?topic=foreign-trade-ops',
+    href: '/foreign-trade/',
     description: '客户开发、平台运营、询盘跟进、SOHO 与外贸一线执行复盘。'
   },
   {
@@ -25,11 +25,11 @@ export const topics: Topic[] = [
   {
     key: 'ai-practice',
     title: 'AI 实战',
-    href: '/blog/?topic=ai-practice',
+    href: '/ai-practice/',
     description: 'AI 工作流、Agent、自动化和企业真实应用测试。'
   },
   {
-    key: 'ai-website',
+    key: 'website',
     title: '建站',
     href: '/website/',
     description: '外贸独立站、Next.js、WordPress、CMS、后台与建站实战记录。'
@@ -38,6 +38,6 @@ export const topics: Topic[] = [
     key: 'training',
     title: '课程培训',
     href: '/training/',
-    description: '企业内训、一对一咨询和外贸/AI/建站实战课程入口。'
+    description: '企业内训、一对一咨询和外贸、AI、建站实战课程入口。'
   }
 ];

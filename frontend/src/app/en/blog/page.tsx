@@ -5,23 +5,25 @@ import { getPosts } from '@/lib/content/posts';
 import { createMetadata } from '@/lib/seo/metadata';
 
 export const metadata = createMetadata({
-  title: '实战博客',
-  description: 'Phoenix 外贸、AI、建站与课程实战内容。',
-  path: '/blog/'
+  title: 'Practical Blog',
+  description:
+    'Practical notes from Phoenix on foreign trade, AI, websites and business execution.',
+  path: '/en/blog/',
+  locale: 'en'
 });
 
-export default function BlogPage() {
-  const posts = getPosts('zh');
+export default function EnglishBlogPage() {
+  const posts = getPosts('en');
 
   return (
     <section className="section page-section">
       <Container>
         <SectionHeading
           eyebrow="Blog"
-          title="实战博客"
-          description="这里是文章系统入口。后续接入后台后，文章、栏目、专题、标签、SEO 和关联内容将由后台管理。"
+          title="Practical Blog"
+          description="A content hub for Phoenix’s practical notes. Posts, topics, tags, SEO fields and related content will later be managed by the backend."
         />
-        <PostList posts={posts} locale="zh" />
+        <PostList posts={posts} locale="en" />
       </Container>
     </section>
   );

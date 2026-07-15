@@ -19,6 +19,13 @@ const featuredPages = enRoutePages.filter((page) =>
   )
 );
 
+const englishMetrics = [
+  'Companies trained or served',
+  'Students trained',
+  'Companies operated',
+  'Multi-industry practice'
+];
+
 export default function EnglishHomePage() {
   return (
     <>
@@ -30,7 +37,7 @@ export default function EnglishHomePage() {
             I do not talk about foreign trade from outside the battlefield. I am still doing customer development, platform operations, independent websites, social media, AI and SOHO practice every day.
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/en/foreign-trade/">
+            <Link className="button primary" href="/en/blog/">
               Read Practical Content
             </Link>
             <Link className="button ghost" href="/en/contact/?type=course">
@@ -43,18 +50,10 @@ export default function EnglishHomePage() {
       <section className="trust-strip" aria-label="Phoenix trust metrics">
         <Container>
           <div className="metric-grid">
-            {profile.trustMetrics.map((metric) => (
+            {profile.trustMetrics.map((metric, index) => (
               <div className="metric-card" key={metric.label}>
                 <strong>{metric.value}</strong>
-                <span>
-                  {metric.label === '培训及服务企业'
-                    ? 'Companies trained or served'
-                    : metric.label === '累计培训学员'
-                      ? 'Students trained'
-                      : metric.label === '跨境电商及外贸公司经营经历'
-                        ? 'Companies operated'
-                        : 'Multi-industry practice'}
-                </span>
+                <span>{englishMetrics[index]}</span>
               </div>
             ))}
           </div>

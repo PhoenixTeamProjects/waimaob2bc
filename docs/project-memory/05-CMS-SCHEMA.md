@@ -2,17 +2,19 @@
 
 后台核心模块：
 
-- posts
-- categories
-- topics
-- tags
-- authors
-- projects
-- courses
-- media_coverage
-- trust_metrics
-- contact_submissions
-- navigation
-- site_settings
+- posts：文章，支持中英双语标题、摘要、正文、SEO、OG、封面、阅读时间、发布状态。
+- categories：栏目，用于内容管理后台的一级归类。
+- topics：专题，对应前台外贸运营、AI实战、建站、课程培训、项目案例等内容方向。
+- tags：标签，用于管理工具、平台、方法、行业、技术和场景。
+- authors：作者，当前默认 Phoenix，后续可扩展协作者。
+- projects：项目案例，独立于普通文章，记录真实项目、状态、过程和复盘。
+- courses：课程与培训服务。
+- media_coverage：媒体资料，必须等待真实素材。
+- trust_metrics：可信数据，必须可追溯，不得编造。
+- contact_submissions：咨询表单提交。
+- navigation：导航配置，前台当前先使用代码集中配置。
+- site_settings：网站设置，包含 Logo、Favicon、头像、默认 SEO、OG 图片、联系方式、社交账号、页脚与分析验证信息。
 
 禁止产品中心、产品分类、产品详情系统。禁止万能 `content` 表。
+
+公开字段、演示数据、SEO、Schema、图片 Alt、文件名和代码注释均不得泄露 Phoenix 已声明需要隐藏的私人业务信息。

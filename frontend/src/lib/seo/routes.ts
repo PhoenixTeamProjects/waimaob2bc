@@ -1,5 +1,6 @@
 import { siteConfig } from '@/config/site';
 import { routePages } from '@/data/route-pages';
+import { getPostSlugs } from '@/lib/content/posts';
 
 export interface SeoRoute {
   path: string;
@@ -27,7 +28,17 @@ export const topicSeoRoutes: SeoRoute[] = routePages.map((page) => ({
       : 0.7
 }));
 
-export const seoRoutes: SeoRoute[] = [...fixedSeoRoutes, ...topicSeoRoutes];
+export const postSeoRoutes: SeoRoute[] = getPostSlugs().map((slug) => ({
+  path: `/blog/${slug}/`,
+  changeFrequency: 'monthly',
+  priority: 0.68
+}));
+
+export const seoRoutes: SeoRoute[] = [
+  ...fixedSeoRoutes,
+  ...topicSeoRoutes,
+  ...postSeoRoutes
+];
 
 export function toAbsoluteUrl(path: string) {
   return new URL(path, siteConfig.url).toString();

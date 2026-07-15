@@ -420,6 +420,40 @@ h1 {
   padding: 26px;
 }
 
+.post-card .text-link {
+  margin-top: 8px;
+}
+
+.text-link {
+  display: inline-flex;
+  color: var(--brand-dark);
+  font-weight: 800;
+}
+
+.text-link:hover {
+  color: var(--brand);
+}
+
+.article-header {
+  max-width: 860px;
+  margin-bottom: 26px;
+}
+
+.article-header h1 {
+  max-width: none;
+  margin-bottom: 18px;
+  font-size: clamp(38px, 6vw, 64px);
+}
+
+.article-body {
+  max-width: 860px;
+}
+
+.article-body p {
+  color: var(--text);
+  font-size: 18px;
+}
+
 .prose-card + .prose-card,
 .about-grid + .prose-card {
   margin-top: 18px;

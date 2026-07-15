@@ -1,18 +1,22 @@
+import type { Locale } from '@/config/i18n';
+
 export type TopicKey =
   | 'foreign-trade-ops'
   | 'social-media'
   | 'ai-practice'
-  | 'ai-website'
+  | 'website'
   | 'training';
 
-export type ContentType =
-  | '实战记录'
-  | '方法教程'
-  | '工具实测'
-  | '项目复盘'
-  | '观点'
-  | '案例'
-  | '踩坑记录';
+export type ContentTypeKey =
+  | 'practice-note'
+  | 'how-to'
+  | 'tool-test'
+  | 'project-review'
+  | 'opinion'
+  | 'case-note'
+  | 'pitfall-note';
+
+export type LocalizedValue<T> = Record<Locale, T>;
 
 export interface Topic {
   key: TopicKey;
@@ -21,13 +25,31 @@ export interface Topic {
   description: string;
 }
 
+export interface PostSource {
+  slug: string;
+  title: LocalizedValue<string>;
+  excerpt: LocalizedValue<string>;
+  body: LocalizedValue<string[]>;
+  type: ContentTypeKey;
+  typeLabel: LocalizedValue<string>;
+  topic: TopicKey;
+  tags: string[];
+  publishedAt: string;
+  updatedAt?: string;
+  readingMinutes: number;
+}
+
 export interface Post {
   slug: string;
   title: string;
   excerpt: string;
-  type: ContentType;
+  body: string[];
+  type: ContentTypeKey;
+  typeLabel: string;
   topic: TopicKey;
   tags: string[];
   publishedAt: string;
+  updatedAt?: string;
   readingMinutes: number;
+  locale: Locale;
 }

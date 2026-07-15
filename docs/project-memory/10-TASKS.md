@@ -13,14 +13,18 @@
 - 按用户最终确认菜单完成页眉导航配置、桌面 Dropdown、移动 Accordion、active 高亮、课程咨询 CTA 和全部一级/二级专题路由页面。
 - 按通用框架中的多语言思想建立中英双语第一阶段框架：中文根路径、英文 `/en/` 路径、双语导航、语言切换、英文首页和英文专题页静态导出。
 - 补齐双语 SEO 第一阶段框架：canonical、hreflang metadata helper、`sitemap.xml`、`robots.txt`、`Person` 和 `WebSite` JSON-LD。
+- 建立双语面包屑框架：Breadcrumb UI 与 BreadcrumbList JSON-LD。
+- 建立博客第一阶段框架：双语文章数据源、文章列表、文章详情页、Article JSON-LD、文章 sitemap 收录。
 
 ## 进行中
 
 - 等待 Phoenix 提供真实照片、联系方式、媒体资料、项目案例素材和课程具体信息。
+- 等待 Phoenix 提供后台具体提示信息后，继续实现后台数据模型与管理界面。
 
 ## 待开始
 
 - 完善首页真实内容。
-- 设计文章详情页和后台字段。
+- 扩展文章字段、栏目、专题、标签和相关文章关系。
+- 设计项目案例详情页和课程详情页。
 - 接入后台或自研 CMS。
 - 配置 Hostinger 面板实际发布参数。

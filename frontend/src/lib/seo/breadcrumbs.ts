@@ -79,6 +79,10 @@ export function createBreadcrumbStructuredData(
 ) {
   const breadcrumbs = getBreadcrumbs(path, locale, currentLabel);
 
+  return createBreadcrumbStructuredDataFromItems(breadcrumbs);
+}
+
+export function createBreadcrumbStructuredDataFromItems(breadcrumbs: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

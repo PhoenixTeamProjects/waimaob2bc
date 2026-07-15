@@ -2,11 +2,7 @@ import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
 import { enRoutePages, getRoutePage } from '@/data/route-pages';
 import { createMetadata } from '@/lib/seo/metadata';
 
-const extraPages = [
-  ['about'],
-  ['contact'],
-  ['blog']
-];
+const extraPages = [['about'], ['contact']];
 
 export function generateStaticParams() {
   const topicParams = enRoutePages.map((page) => ({
@@ -40,16 +36,6 @@ export async function generateMetadata({
       description:
         'Contact Phoenix for foreign trade practice, AI practice, website building, corporate training and consulting.',
       path: '/en/contact/',
-      locale: 'en'
-    });
-  }
-
-  if (path === '/blog/') {
-    return createMetadata({
-      title: 'Practical Blog',
-      description:
-        'Practical notes from Phoenix on foreign trade, AI, websites and business execution.',
-      path: '/en/blog/',
       locale: 'en'
     });
   }
@@ -111,22 +97,6 @@ export default async function EnglishCatchAllPage({
             'Corporate training',
             'One-on-one consulting'
           ]
-        }}
-      />
-    );
-  }
-
-  if (path === '/blog/') {
-    return (
-      <RouteLandingPage
-        locale="en"
-        page={{
-          path,
-          eyebrow: 'Blog',
-          title: 'Practical Blog',
-          description:
-            'A content hub for Phoenix’s practical notes. The English blog list will be connected to the future content backend.',
-          points: ['Practice notes', 'How-to guides', 'Tool tests', 'Project reviews', 'Opinion pieces']
         }}
       />
     );
