@@ -1,0 +1,22 @@
+# 10 - Tasks
+
+## 已完成
+
+- 绑定 GitHub remote。
+- 验证 GitHub token 可用。
+- 验证 VPS SSH 可连通。
+- 读取外贸 B2B 通用规范 docx 的方案 B 框架。
+- 建立个人品牌博客站适用的 GitHub 仓库框架。
+- 建立 VPS 支撑目录 `/opt/websites/waimaob2bc/`，用于后台、数据库、备份、日志和反代预留。
+- 通过 `npm run typecheck` 和 `npm run build` 验证前台框架。
+
+## 进行中
+
+- 等待 Phoenix 提供最终页眉菜单。
+
+## 待开始
+
+- 完善首页真实内容。
+- 设计文章详情页和后台字段。
+- 接入后台或自研 CMS。
+- 配置 Hostinger 面板实际发布参数。
