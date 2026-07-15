@@ -18,9 +18,9 @@ export const topics: Topic[] = [
   },
   {
     key: 'social-media',
-    title: '社媒运营',
-    href: '/blog/?topic=social-media',
-    description: '海外社媒获客、内容运营、账号资产与私域沟通方法。'
+    title: '社媒获客',
+    href: '/foreign-trade/social-media-leads/',
+    description: '海外社媒获客、内容运营、账号资产与 B2B 线索沉淀方法。'
   },
   {
     key: 'ai-practice',
@@ -30,14 +30,14 @@ export const topics: Topic[] = [
   },
   {
     key: 'ai-website',
-    title: 'AI 建站',
-    href: '/blog/?topic=ai-website',
-    description: 'Codex、Next.js、CMS、后台与外贸独立站建设记录。'
+    title: '建站',
+    href: '/website/',
+    description: '外贸独立站、Next.js、WordPress、CMS、后台与建站实战记录。'
   },
   {
     key: 'training',
     title: '课程培训',
-    href: '/contact/',
+    href: '/training/',
     description: '企业内训、一对一咨询和外贸/AI/建站实战课程入口。'
   }
 ];

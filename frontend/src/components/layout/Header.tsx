@@ -1,7 +1,41 @@
+'use client';
+
 import Link from 'next/link';
-import { mainNavigation, navigationStatus } from '@/config/navigation';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { headerCta, mainNavigation, type NavigationItem } from '@/config/navigation';
+
+function normalizePath(path: string) {
+  if (path === '/') {
+    return '/';
+  }
+
+  return path.endsWith('/') ? path : `${path}/`;
+}
+
+function isItemActive(item: NavigationItem, pathname: string) {
+  const currentPath = normalizePath(pathname);
+  const itemPath = normalizePath(item.href);
+
+  if (itemPath === '/') {
+    return currentPath === '/';
+  }
+
+  return currentPath === itemPath || currentPath.startsWith(itemPath);
+}
 
 export function Header() {
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
+
+  function toggleExpanded(label: string) {
+    setExpandedItems((current) => ({
+      ...current,
+      [label]: !current[label]
+    }));
+  }
+
   return (
     <header className="site-header">
       <div className="container header-inner">
@@ -12,18 +46,106 @@ export function Header() {
             <small>外贸实战操盘手</small>
           </span>
         </Link>
-        <nav className="main-nav" aria-label="主导航">
+        <nav className="main-nav desktop-nav" aria-label="主导航">
           {mainNavigation.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
+            <div className="nav-item" key={item.href}>
+              <Link
+                className={isItemActive(item, pathname) ? 'nav-link active' : 'nav-link'}
+                href={item.href}
+              >
+                {item.label}
+                {item.children ? <span aria-hidden="true">▼</span> : null}
+              </Link>
+              {item.children ? (
+                <div className="dropdown-menu">
+                  {item.children.map((child) => (
+                    <Link
+                      className={
+                        isItemActive(child, pathname)
+                          ? 'dropdown-link active'
+                          : 'dropdown-link'
+                      }
+                      href={child.href}
+                      key={child.href}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+            </div>
           ))}
         </nav>
-        <Link className="header-cta" href="/contact/">
-          课程咨询
+        <Link className="header-cta desktop-cta" href={headerCta.href}>
+          {headerCta.label}
         </Link>
+        <button
+          aria-expanded={mobileOpen}
+          aria-label="打开或关闭移动端菜单"
+          className="mobile-menu-toggle"
+          onClick={() => setMobileOpen((open) => !open)}
+          type="button"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
-      <p className="nav-note">{navigationStatus}</p>
+      <nav className={mobileOpen ? 'mobile-nav open' : 'mobile-nav'} aria-label="移动端主导航">
+        <div className="container mobile-nav-inner">
+          {mainNavigation.map((item) => (
+            <div className="mobile-nav-item" key={item.href}>
+              <div className="mobile-nav-row">
+                <Link
+                  className={isItemActive(item, pathname) ? 'mobile-link active' : 'mobile-link'}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+                {item.children ? (
+                  <button
+                    aria-expanded={Boolean(expandedItems[item.label])}
+                    aria-label={`展开或收起${item.label}二级菜单`}
+                    className="mobile-submenu-toggle"
+                    onClick={() => toggleExpanded(item.label)}
+                    type="button"
+                  >
+                    {expandedItems[item.label] ? '−' : '+'}
+                  </button>
+                ) : null}
+              </div>
+              {item.children ? (
+                <div
+                  className={
+                    expandedItems[item.label]
+                      ? 'mobile-submenu expanded'
+                      : 'mobile-submenu'
+                  }
+                >
+                  {item.children.map((child) => (
+                    <Link
+                      className={
+                        isItemActive(child, pathname)
+                          ? 'mobile-sub-link active'
+                          : 'mobile-sub-link'
+                      }
+                      href={child.href}
+                      key={child.href}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ))}
+          <Link className="header-cta mobile-cta" href={headerCta.href}>
+            {headerCta.label}
+          </Link>
+        </div>
+      </nav>
     </header>
   );
 }

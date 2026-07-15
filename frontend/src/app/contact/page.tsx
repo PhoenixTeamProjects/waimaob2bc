@@ -15,7 +15,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Contact"
           title="联系我"
-          description="适合咨询外贸运营、AI 实战、AI 建站、企业内训、一对一辅导和商务合作。"
+          description="适合咨询外贸运营、AI实战、建站、企业内训、一对一辅导和商务合作。"
         />
         <div className="prose-card">
           <p>联系方式等待 Phoenix 提供真实资料后再填写。</p>

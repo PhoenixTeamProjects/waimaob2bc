@@ -47,11 +47,11 @@
 
 ## 4. 当前实践与专业方向
 
-- 外贸运营：客户开发、阿里国际站、海关数据、询盘与跟进、SOHO。
+- 外贸运营：客户开发、阿里国际站、海关数据、社媒获客、SOHO实战。
 - 海外社媒：获客、内容运营、账号与企业资产、LinkedIn、TikTok、WhatsApp。
 - AI 实战：AI 工作流、AI Agent、AI 自动化、企业 AI 应用、AI 工具实测。
-- AI 建站：Claude Code、Codex、Next.js、外贸独立站、CMS/后台、建站项目。
-- 培训服务：外贸实战、AI 实战、AI 建站、企业内训、一对一咨询。
+- 建站：外贸独立站、Next.js 建站、WordPress 建站、CMS 与后台、自研后台、GitHub、VPS、多语言、SEO、AI 辅助建站等内容。
+- 培训服务：外贸实战、AI 实战、建站实战、企业内训、一对一咨询。
 - 可公开的当前参与行业包括车辆与工业零部件、农业机械配件、工程机械及矿山设备配件、新能源充电设备、油气与工业设备。
 - 当前经营西安寰宇坤泰工业科技有限公司；可公开的相关业务网站为 `huanyukuntai.com`。
 - SOHO 实战是长期内容方向，但只能公开用户允许公开的业务线、过程和方法；项目状态可以如实标记“进行中”，不得编造订单、客户、收入、成交金额或海外市场成果。
@@ -82,41 +82,32 @@
   - 客户开发
   - 阿里国际站
   - 海关数据
-  - 询盘与跟进
-  - SOHO 实战
-- 社媒运营
-  - 海外社媒获客
-  - 社媒内容运营
-  - 社媒账号与资产
-  - LinkedIn 实战
-  - TikTok 实战
-  - WhatsApp 实战
-- AI 实战
-  - AI 工作流
+  - 社媒获客
+  - SOHO实战
+- AI实战
+  - AI工作流
   - AI Agent
-  - AI 自动化
-  - 企业 AI 应用
-  - AI 工具实测
-- AI 建站
-  - Claude Code
-  - Codex
-  - Next.js 建站
+  - AI自动化
+  - AI工具实测
+- 建站
   - 外贸独立站
-  - CMS 与后台
+  - Next.js建站
+  - WordPress建站
+  - CMS与后台
   - 建站实战
 - 课程培训
   - 外贸实战课程
-  - AI 实战课程
-  - AI 建站课程
+  - AI实战课程
+  - 建站实战课程
   - 企业内训
-  - 一对一咨询
+- 项目案例
 - 关于我
 - 联系我
 - 页眉右侧主要行动入口：课程咨询
 
 一级栏目必须拥有可点击的专题首页；桌面端文字进入专题页、箭头展开下拉菜单；移动端文字进入专题页、独立的加减按钮控制折叠。
 
-具体平台、工具和技术（如 Facebook、Instagram、GitHub、VPS、Hostinger、Directus）使用标签管理，不直接扩张为页眉菜单。
+具体平台、工具和技术（如 Claude Code、Codex、Directus、GitHub、VPS、Hostinger、SEO、GA4、Search Console、LinkedIn、TikTok、WhatsApp、Facebook、Instagram）使用标签或专题标签管理，不直接放入页眉菜单。
 
 ## 7. 首页与页面原则
 
