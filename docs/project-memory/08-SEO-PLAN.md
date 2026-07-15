@@ -15,5 +15,6 @@
 - Sitemap 必须包含中文和英文 URL，并保留对应语言 alternate。
 - Robots 必须允许公开页面抓取，并指向 `/sitemap.xml`。
 - 结构化数据以 `Person` 和 `WebSite` 为基础，后续文章、课程、项目案例再扩展 `Article`、`BreadcrumbList` 等。
+- 专题页必须显示中英双语面包屑，并输出对应 `BreadcrumbList` JSON-LD。
 - SEO 文案不得编造身份、媒体、案例、课程结果或经营数据。
 - SEO、Schema、Sitemap、图片 Alt 不得包含用户私人业务信息。

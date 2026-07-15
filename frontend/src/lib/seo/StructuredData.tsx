@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site';
+import { JsonLd } from '@/components/ui/JsonLd';
 
 const structuredData = [
   {
@@ -24,12 +25,5 @@ const structuredData = [
 ];
 
 export function StructuredData() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData)
-      }}
-    />
-  );
+  return <JsonLd data={structuredData} />;
 }

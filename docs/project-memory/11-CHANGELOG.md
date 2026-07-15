@@ -14,3 +14,4 @@
 - 建立中英双语框架：新增 i18n 配置、双语导航、语言切换、英文 `/en/` 首页与英文专题页静态路由。
 - 建立双语 SEO 框架：自动 sitemap、robots、canonical/hreflang metadata helper、基础 Person/WebSite 结构化数据。
 - 将中英文专题页统一为集中式静态路由生成，确保专题页拥有正确 canonical、hreflang 和页面 metadata。
+- 为中英文专题页新增 Breadcrumb UI 和 BreadcrumbList JSON-LD。

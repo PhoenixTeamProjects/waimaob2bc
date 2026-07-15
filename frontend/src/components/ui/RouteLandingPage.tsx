@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { JsonLd } from '@/components/ui/JsonLd';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { localizePath, type Locale } from '@/config/i18n';
 import type { RoutePageContent } from '@/data/route-pages';
+import {
+  createBreadcrumbStructuredData,
+  getBreadcrumbs
+} from '@/lib/seo/breadcrumbs';
 
 export function RouteLandingPage({
   page,
@@ -11,9 +17,13 @@ export function RouteLandingPage({
   page: RoutePageContent;
   locale?: Locale;
 }) {
+  const breadcrumbs = getBreadcrumbs(page.path, locale, page.title);
+
   return (
     <section className="section page-section">
+      <JsonLd data={createBreadcrumbStructuredData(page.path, locale, page.title)} />
       <Container>
+        <Breadcrumbs items={breadcrumbs} />
         <SectionHeading
           eyebrow={page.eyebrow}
           title={page.title}

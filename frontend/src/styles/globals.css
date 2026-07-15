@@ -276,6 +276,41 @@ h1 {
   padding: 76px 0;
 }
 
+.breadcrumbs {
+  margin: -24px 0 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  color: #9aa3b2;
+  content: "/";
+}
+
+.breadcrumbs a:hover {
+  color: var(--brand-dark);
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .trust-strip {
   padding: 24px 0;
   border-top: 1px solid var(--line);
