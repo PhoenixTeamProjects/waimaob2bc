@@ -1,3 +1,5 @@
+import type { Locale } from '@/config/i18n';
+
 export interface RoutePageContent {
   path: string;
   eyebrow: string;
@@ -6,7 +8,7 @@ export interface RoutePageContent {
   points: string[];
 }
 
-export const routePages: RoutePageContent[] = [
+export const zhRoutePages: RoutePageContent[] = [
   {
     path: '/foreign-trade/',
     eyebrow: 'Foreign Trade Operations',
@@ -170,9 +172,180 @@ export const routePages: RoutePageContent[] = [
   }
 ];
 
-export function getRoutePage(path: string): RoutePageContent {
+export const enRoutePages: RoutePageContent[] = [
+  {
+    path: '/foreign-trade/',
+    eyebrow: 'Foreign Trade Operations',
+    title: 'Foreign Trade',
+    description: 'A practical content hub for customer development, Alibaba.com operations, customs data, social lead generation and SOHO practice.',
+    points: ['Who the customers are', 'Where to find them', 'How to contact them', 'How to follow up', 'How to move deals forward']
+  },
+  {
+    path: '/foreign-trade/customer-development/',
+    eyebrow: 'Customer Development',
+    title: 'Customer Development',
+    description: 'A practical workflow from product understanding, target market, buyer profile and channel selection to contact discovery.',
+    points: ['Buyer profile', 'Company list building', 'Background research', 'Contact discovery', 'Follow-up system']
+  },
+  {
+    path: '/foreign-trade/alibaba/',
+    eyebrow: 'Alibaba.com Operations',
+    title: 'Alibaba.com',
+    description: 'Practical notes on product structure, keywords, titles, images, publishing rhythm, RFQ, inquiries and follow-up.',
+    points: ['Product structure', 'Keyword research', 'Titles and images', 'Publishing rhythm', 'Inquiry review']
+  },
+  {
+    path: '/foreign-trade/customs-data/',
+    eyebrow: 'Customs Data',
+    title: 'Customs Data',
+    description: 'Customs data is not just software usage. It requires product knowledge, HS codes, English names, buying habits and buyer screening.',
+    points: ['HS codes', 'Product names', 'Importer screening', 'Website research', 'Contact development']
+  },
+  {
+    path: '/foreign-trade/social-media-leads/',
+    eyebrow: 'Social Media Leads',
+    title: 'Social Leads',
+    description: 'Use overseas social platforms as B2B lead generation and trust-building channels, not just posting tools.',
+    points: ['Content direction', 'Account assets', 'Target buyers', 'Engagement', 'Lead management']
+  },
+  {
+    path: '/foreign-trade/soho/',
+    eyebrow: 'SOHO Practice',
+    title: 'SOHO Practice',
+    description: 'Real notes on industry selection, market judgment, website building, customer development and review from Phoenix’s SOHO practice.',
+    points: ['Industry choice', 'Product judgment', 'Cost control', 'Website building', 'Process review']
+  },
+  {
+    path: '/ai-practice/',
+    eyebrow: 'AI Practice',
+    title: 'AI Practice',
+    description: 'Testing AI workflows, AI Agents, automation and tools inside real business processes.',
+    points: ['Business workflow', 'Tool stack', 'Agent experiments', 'Automation', 'Review']
+  },
+  {
+    path: '/ai-practice/workflows/',
+    eyebrow: 'AI Workflows',
+    title: 'AI Workflows',
+    description: 'Turn repeated and complex foreign-trade work into executable, reviewable and improvable AI workflows.',
+    points: ['Task breakdown', 'Prompts', 'Toolchain', 'Human review', 'Optimization']
+  },
+  {
+    path: '/ai-practice/agents/',
+    eyebrow: 'AI Agent',
+    title: 'AI Agent',
+    description: 'Testing what AI Agents can realistically handle in foreign trade, content, website and operations scenarios.',
+    points: ['Task boundary', 'Tool use', 'Context', 'Safety checks', 'Delivery quality']
+  },
+  {
+    path: '/ai-practice/automation/',
+    eyebrow: 'AI Automation',
+    title: 'AI Automation',
+    description: 'Use automation to reduce repetitive work without replacing real judgment and business understanding.',
+    points: ['Data organization', 'Content support', 'Workflow triggers', 'Quality control', 'Human fallback']
+  },
+  {
+    path: '/ai-practice/tools/',
+    eyebrow: 'AI Tool Tests',
+    title: 'AI Tool Tests',
+    description: 'Not another tool list. This section records how tools perform in real foreign-trade, website and content work.',
+    points: ['Use case', 'Process', 'Pros and cons', 'Boundary', 'Worth using?']
+  },
+  {
+    path: '/website/',
+    eyebrow: 'Website Building',
+    title: 'Website',
+    description: 'A hub for B2B websites, Next.js, WordPress, CMS/admin systems, deployment, multilingual structure, SEO and AI-assisted website building.',
+    points: ['Positioning', 'Tech route', 'Content model', 'Deployment', 'SEO foundation']
+  },
+  {
+    path: '/website/b2b-website/',
+    eyebrow: 'B2B Website',
+    title: 'B2B Website',
+    description: 'A foreign-trade website is not a brochure. It is a system for products, content, trust and buyer decision-making.',
+    points: ['Architecture', 'Content plan', 'Trust proof', 'Inquiry path', 'SEO indexing']
+  },
+  {
+    path: '/website/nextjs/',
+    eyebrow: 'Next.js',
+    title: 'Next.js',
+    description: 'Real notes on building modern foreign-trade and personal brand websites with Next.js.',
+    points: ['App Router', 'Static export', 'Components', 'Performance', 'Deployment']
+  },
+  {
+    path: '/website/wordpress/',
+    eyebrow: 'WordPress',
+    title: 'WordPress',
+    description: 'When WordPress fits foreign-trade websites, how to choose themes/plugins, and where its maintenance limits are.',
+    points: ['Theme choice', 'Plugin boundary', 'Editing', 'Performance', 'Maintenance']
+  },
+  {
+    path: '/website/cms-admin/',
+    eyebrow: 'CMS & Admin',
+    title: 'CMS & Admin',
+    description: 'Content models, admin fields, permissions, media library, SEO fields and future self-built backend planning.',
+    points: ['Content model', 'Admin fields', 'Permissions', 'Media management', 'Data API']
+  },
+  {
+    path: '/website/cases/',
+    eyebrow: 'Website Cases',
+    title: 'Website Cases',
+    description: 'Real website projects, problems, deployment notes, adjustments and reviews.',
+    points: ['Requirements', 'Tech choice', 'Page building', 'Deployment issues', 'Review']
+  },
+  {
+    path: '/training/',
+    eyebrow: 'Training',
+    title: 'Training',
+    description: 'Turn foreign trade, AI and website practice into executable methods for courses, corporate training and consulting.',
+    points: ['Foreign trade', 'AI practice', 'Website practice', 'Corporate training', '1-on-1 consulting']
+  },
+  {
+    path: '/training/foreign-trade/',
+    eyebrow: 'Foreign Trade Course',
+    title: 'Foreign Trade Course',
+    description: 'Build practical foreign-trade ability around customer development, platform operations, customs data, inquiry follow-up and execution.',
+    points: ['Product understanding', 'Market judgment', 'Buyer profile', 'Channel selection', 'Execution review']
+  },
+  {
+    path: '/training/ai-practice/',
+    eyebrow: 'AI Practice Course',
+    title: 'AI Practice Course',
+    description: 'Help companies and individuals put AI into real work instead of staying at concept or tool-demo level.',
+    points: ['Business scenarios', 'Workflows', 'Agents', 'Automation', 'Safety boundary']
+  },
+  {
+    path: '/training/website/',
+    eyebrow: 'Website Course',
+    title: 'Website Course',
+    description: 'Build practical website capability around B2B websites, Next.js, WordPress, CMS, deployment and SEO.',
+    points: ['Planning', 'Pages', 'Backend model', 'Deployment', 'SEO foundation']
+  },
+  {
+    path: '/training/corporate/',
+    eyebrow: 'Corporate Training',
+    title: 'Corporate Training',
+    description: 'Training for business owners, foreign-trade managers and teams, designed around real business problems.',
+    points: ['Business diagnosis', 'Team execution', 'Customer development', 'AI application', 'Website system']
+  },
+  {
+    path: '/projects/',
+    eyebrow: 'Projects',
+    title: 'Projects',
+    description: 'Real projects, website projects, SOHO projects, website building projects and foreign-trade operation cases from Phoenix.',
+    points: ['Real projects', 'In-progress status', 'Problem background', 'Process', 'Review']
+  }
+];
+
+export const routePagesByLocale: Record<Locale, RoutePageContent[]> = {
+  zh: zhRoutePages,
+  en: enRoutePages
+};
+
+export const routePages = zhRoutePages;
+
+export function getRoutePage(path: string, locale: Locale = 'zh'): RoutePageContent {
   const normalizedPath = path.endsWith('/') ? path : `${path}/`;
-  const page = routePages.find((item) => item.path === normalizedPath);
+  const page = routePagesByLocale[locale].find((item) => item.path === normalizedPath);
 
   if (!page) {
     throw new Error(`Route page content not found: ${path}`);

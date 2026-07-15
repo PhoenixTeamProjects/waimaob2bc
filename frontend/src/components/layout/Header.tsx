@@ -3,7 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { headerCta, mainNavigation, type NavigationItem } from '@/config/navigation';
+import {
+  getAlternateLocale,
+  getLocaleFromPath,
+  localeLabels,
+  localizePath,
+  stripLocaleFromPath
+} from '@/config/i18n';
+import { getHeaderCta, getMainNavigation, type NavigationItem } from '@/config/navigation';
 
 function normalizePath(path: string) {
   if (path === '/') {
@@ -26,6 +33,11 @@ function isItemActive(item: NavigationItem, pathname: string) {
 
 export function Header() {
   const pathname = usePathname();
+  const locale = getLocaleFromPath(pathname);
+  const alternateLocale = getAlternateLocale(locale);
+  const mainNavigation = getMainNavigation(locale);
+  const headerCta = getHeaderCta(locale);
+  const languageSwitchHref = localizePath(stripLocaleFromPath(pathname), alternateLocale);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
 
@@ -43,7 +55,11 @@ export function Header() {
           <span className="brand-mark">P</span>
           <span>
             <strong>Phoenix</strong>
-            <small>外贸实战操盘手</small>
+            <small>
+              {locale === 'zh'
+                ? '外贸实战操盘手'
+                : 'Foreign Trade Practitioner'}
+            </small>
           </span>
         </Link>
         <nav className="main-nav desktop-nav" aria-label="主导航">
@@ -78,6 +94,9 @@ export function Header() {
         </nav>
         <Link className="header-cta desktop-cta" href={headerCta.href}>
           {headerCta.label}
+        </Link>
+        <Link className="language-switch desktop-language" href={languageSwitchHref}>
+          {localeLabels[alternateLocale]}
         </Link>
         <button
           aria-expanded={mobileOpen}
@@ -143,6 +162,9 @@ export function Header() {
           ))}
           <Link className="header-cta mobile-cta" href={headerCta.href}>
             {headerCta.label}
+          </Link>
+          <Link className="language-switch mobile-language" href={languageSwitchHref}>
+            {locale === 'zh' ? 'Switch to English' : '切换到中文'}
           </Link>
         </div>
       </nav>

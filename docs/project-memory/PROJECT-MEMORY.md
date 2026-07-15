@@ -18,6 +18,7 @@
 - 总纲源自旧 B2B 外贸网站规划；只复用个人品牌、博客内容、课程服务、媒体证明、SEO、咨询和后台数据架构中适用的部分，不继承产品展示与产品获客逻辑。
 - 网站需要基于后续提供的项目开发专属后台，核心管理文章、栏目、专题、标签、项目案例、媒体资料、信任数据、课程、咨询和网站设置。
 - 已确认部署模式：GitHub + Hostinger + VPS。GitHub 是源码主线；Hostinger 绑定仓库分支后自动拉取代码，根据根目录 `package.json` 安装依赖、执行构建并发布前台；VPS 默认用于后台、数据库、备份、日志、反代或辅助服务，不默认作为前台主站发布入口。
+- 已确认网站需要做中英双语。当前第一阶段双语框架采用中文根路径 + 英文 `/en/` 路径：中文保持 `/website/` 等既有 URL，英文使用 `/en/website/` 等对应 URL，适合 Hostinger 静态构建，不依赖服务器运行时。
 
 ## 2. 品牌定位
 
@@ -153,6 +154,7 @@
 ## 11. 后台与数据架构
 
 - 核心模块至少包括：`posts`、`categories`、`topics`、`tags`、`authors`、`projects`、`courses`、`media_coverage`、`trust_metrics`、`contact_submissions`、`navigation`、`site_settings`。
+- 双语字段应从后台模型阶段开始考虑，至少支持中文、英文两套标题、摘要、正文、SEO、OG、图片 Alt 和导航名称；前端通过 i18n 与数据访问层读取，不在组件里散落硬编码。
 - 禁止把全部内容塞入一个万能 `content` 表。
 - 前后台从第一天解耦：前端负责展示、SEO、交互与内容消费；后台负责内容、分类、标签、项目、课程、媒体、信任数据、咨询和网站设置。
 - 前端通过 Service / Repository / Data Adapter 层访问数据，例如 `getPosts()`、`getPostBySlug()`、`getProjects()`、`getCourses()`、`getMediaCoverage()` 和 `getTrustMetrics()`。

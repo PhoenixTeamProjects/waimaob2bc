@@ -167,6 +167,27 @@ a {
   color: #fff;
 }
 
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.desktop-language {
+  padding: 9px 13px;
+}
+
+.language-switch:hover {
+  color: var(--brand-dark);
+  border-color: rgba(21, 93, 252, 0.32);
+}
+
 .mobile-menu-toggle,
 .mobile-nav {
   display: none;
@@ -435,7 +456,8 @@ h1 {
   }
 
   .desktop-nav,
-  .desktop-cta {
+  .desktop-cta,
+  .desktop-language {
     display: none;
   }
 
@@ -509,6 +531,12 @@ h1 {
   .mobile-cta {
     margin-top: 16px;
     width: 100%;
+  }
+
+  .mobile-language {
+    width: 100%;
+    margin-top: 10px;
+    min-height: 44px;
   }
 
   .card-grid {
