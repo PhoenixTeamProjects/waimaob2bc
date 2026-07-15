@@ -16,6 +16,7 @@
 - 建立双语面包屑框架：Breadcrumb UI 与 BreadcrumbList JSON-LD。
 - 建立博客第一阶段框架：双语文章数据源、文章列表、文章详情页、Article JSON-LD、文章 sitemap 收录。
 - 建立项目案例第一阶段框架：独立项目数据模型、项目案例列表页、空状态、录入标准、CollectionPage JSON-LD。
+- 建立课程培训第一阶段框架：独立课程数据模型、课程培训入口页、真实资料空状态、咨询信息清单、CollectionPage JSON-LD。
 
 ## 进行中
 

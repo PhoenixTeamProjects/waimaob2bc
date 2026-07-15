@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { ProjectIndexPage } from '@/components/ui/ProjectIndexPage';
 import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
+import { TrainingIndexPage } from '@/components/ui/TrainingIndexPage';
 import { getRoutePage, routePages } from '@/data/route-pages';
 import { createMetadata } from '@/lib/seo/metadata';
 
@@ -44,6 +45,10 @@ export default async function ZhTopicPage({
 
   if (path === '/projects/') {
     return <ProjectIndexPage locale="zh" />;
+  }
+
+  if (path === '/training/') {
+    return <TrainingIndexPage locale="zh" />;
   }
 
   try {

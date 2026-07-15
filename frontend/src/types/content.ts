@@ -25,6 +25,15 @@ export type ProjectTypeKey =
   | 'foreign-trade-ops'
   | 'training';
 
+export type CourseStatusKey = 'draft' | 'planning' | 'open' | 'closed';
+
+export type CourseTypeKey =
+  | 'foreign-trade'
+  | 'ai-practice'
+  | 'website'
+  | 'corporate'
+  | 'consulting';
+
 export type LocalizedValue<T> = Record<Locale, T>;
 
 export interface Topic {
@@ -95,5 +104,34 @@ export interface ProjectCase {
   process: string[];
   result: string;
   review: string;
+  locale: Locale;
+}
+
+export interface CourseSource {
+  slug: string;
+  title: LocalizedValue<string>;
+  summary: LocalizedValue<string>;
+  type: CourseTypeKey;
+  typeLabel: LocalizedValue<string>;
+  status: CourseStatusKey;
+  statusLabel: LocalizedValue<string>;
+  suitableFor: LocalizedValue<string[]>;
+  outcomes: LocalizedValue<string[]>;
+  modules: LocalizedValue<string[]>;
+  notes: LocalizedValue<string>;
+}
+
+export interface Course {
+  slug: string;
+  title: string;
+  summary: string;
+  type: CourseTypeKey;
+  typeLabel: string;
+  status: CourseStatusKey;
+  statusLabel: string;
+  suitableFor: string[];
+  outcomes: string[];
+  modules: string[];
+  notes: string;
   locale: Locale;
 }

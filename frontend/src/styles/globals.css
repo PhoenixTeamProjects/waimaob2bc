@@ -419,6 +419,13 @@ h1 {
   gap: 18px;
 }
 
+.training-track-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
 .process-item {
   padding: 18px 20px;
   border: 1px solid var(--line);
@@ -632,6 +639,10 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .training-track-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .metric-grid,
   .process-list,
   .project-type-grid,
@@ -655,6 +666,10 @@ h1 {
   }
 
   .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-track-grid {
     grid-template-columns: 1fr;
   }
 
