@@ -9,3 +9,4 @@
 - 明确 Hostinger 从 GitHub 仓库自动拉取构建部署。
 - 创建 VPS 支撑框架目录 `/opt/websites/waimaob2bc/`。
 - 验证 Next.js 前台静态构建成功，构建产物目录为 `frontend/out`。
+- 根据 Phoenix 最新个人情况资料，更新首页、关于页、公开个人资料数据和项目记忆。

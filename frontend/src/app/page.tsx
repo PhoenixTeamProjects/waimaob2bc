@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { siteConfig, topics } from '@/config/site';
+import { profile } from '@/data/profile';
 import { getPosts } from '@/lib/content/posts';
 
 export default function HomePage() {
@@ -14,7 +15,7 @@ export default function HomePage() {
           <p className="eyebrow">Phoenix 个人品牌网站</p>
           <h1>{siteConfig.title}</h1>
           <p className="hero-lead">
-            一个围绕真实外贸一线、AI 实战、独立站建设、课程培训和项目复盘持续更新的个人网站。
+            {profile.heroStatements.join(' ')}
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/blog/">
@@ -27,12 +28,25 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <section className="trust-strip" aria-label="Phoenix 真实经历数据">
+        <Container>
+          <div className="metric-grid">
+            {profile.trustMetrics.map((metric) => (
+              <div className="metric-card" key={metric.label}>
+                <strong>{metric.value}</strong>
+                <span>{metric.label}</span>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <section className="section">
         <Container>
           <SectionHeading
-            eyebrow="内容框架"
-            title="本站先搭框架，再逐步填入真实资料"
-            description="当前阶段只放可确认的方向和结构，不编造照片、媒体链接、课程价格、客户案例或经营数据。"
+            eyebrow="我仍然在一线做外贸"
+            title="很多外贸课程来自过去，我的内容来自今天"
+            description="Phoenix 长期参与客户开发、平台运营、独立站、海关数据、海外社媒、AI 和 SOHO 项目。本网站记录正在发生的真实工作、问题、调整和复盘。"
           />
           <div className="card-grid">
             {topics.map((topic) => (
@@ -40,6 +54,23 @@ export default function HomePage() {
                 <h3>{topic.title}</h3>
                 <p>{topic.description}</p>
               </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="section">
+        <Container>
+          <SectionHeading
+            eyebrow="方法论"
+            title="把复杂的外贸工作拆成能执行的步骤"
+            description={profile.trainingPhilosophy}
+          />
+          <div className="process-list">
+            {profile.currentPractice.map((item) => (
+              <div className="process-item" key={item}>
+                {item}
+              </div>
             ))}
           </div>
         </Container>

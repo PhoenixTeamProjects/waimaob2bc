@@ -9,6 +9,7 @@
 - 建立个人品牌博客站适用的 GitHub 仓库框架。
 - 建立 VPS 支撑目录 `/opt/websites/waimaob2bc/`，用于后台、数据库、备份、日志和反代预留。
 - 通过 `npm run typecheck` 和 `npm run build` 验证前台框架。
+- 读取并吸收 Phoenix 最新个人情况总纲，已将可公开资料整理进首页、关于页和项目记忆；敏感私人业务内容未进入公开代码与文档。
 
 ## 进行中
 
