@@ -16,6 +16,15 @@ export type ContentTypeKey =
   | 'case-note'
   | 'pitfall-note';
 
+export type ProjectStatusKey = 'planned' | 'in-progress' | 'completed' | 'paused';
+
+export type ProjectTypeKey =
+  | 'website'
+  | 'soho'
+  | 'ai-website'
+  | 'foreign-trade-ops'
+  | 'training';
+
 export type LocalizedValue<T> = Record<Locale, T>;
 
 export interface Topic {
@@ -51,5 +60,40 @@ export interface Post {
   publishedAt: string;
   updatedAt?: string;
   readingMinutes: number;
+  locale: Locale;
+}
+
+export interface ProjectSource {
+  slug: string;
+  title: LocalizedValue<string>;
+  summary: LocalizedValue<string>;
+  type: ProjectTypeKey;
+  typeLabel: LocalizedValue<string>;
+  status: ProjectStatusKey;
+  statusLabel: LocalizedValue<string>;
+  tags: string[];
+  startedAt?: string;
+  publishedAt?: string;
+  problem: LocalizedValue<string>;
+  process: LocalizedValue<string[]>;
+  result: LocalizedValue<string>;
+  review: LocalizedValue<string>;
+}
+
+export interface ProjectCase {
+  slug: string;
+  title: string;
+  summary: string;
+  type: ProjectTypeKey;
+  typeLabel: string;
+  status: ProjectStatusKey;
+  statusLabel: string;
+  tags: string[];
+  startedAt?: string;
+  publishedAt?: string;
+  problem: string;
+  process: string[];
+  result: string;
+  review: string;
   locale: Locale;
 }

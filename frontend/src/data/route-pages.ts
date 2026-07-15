@@ -167,7 +167,7 @@ export const zhRoutePages: RoutePageContent[] = [
     path: '/projects/',
     eyebrow: 'Projects',
     title: '项目案例',
-    description: '用于展示 Phoenix 的真实项目、网站项目、SOHO 项目、建站项目和外贸运营案例。',
+    description: '用于展示 Phoenix 的真实项目、网站项目、SOHO 项目、AI建站项目和外贸运营案例。',
     points: ['真实项目', '进行中状态', '问题背景', '解决过程', '复盘总结']
   }
 ];
@@ -331,7 +331,7 @@ export const enRoutePages: RoutePageContent[] = [
     path: '/projects/',
     eyebrow: 'Projects',
     title: 'Projects',
-    description: 'Real projects, website projects, SOHO projects, website building projects and foreign-trade operation cases from Phoenix.',
+    description: 'Real projects, website projects, SOHO projects, AI website projects and foreign-trade operation cases from Phoenix.',
     points: ['Real projects', 'In-progress status', 'Problem background', 'Process', 'Review']
   }
 ];

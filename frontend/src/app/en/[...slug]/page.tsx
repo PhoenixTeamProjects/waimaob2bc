@@ -1,3 +1,4 @@
+import { ProjectIndexPage } from '@/components/ui/ProjectIndexPage';
 import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
 import { enRoutePages, getRoutePage } from '@/data/route-pages';
 import { createMetadata } from '@/lib/seo/metadata';
@@ -100,6 +101,10 @@ export default async function EnglishCatchAllPage({
         }}
       />
     );
+  }
+
+  if (path === '/projects/') {
+    return <ProjectIndexPage locale="en" />;
   }
 
   return <RouteLandingPage locale="en" page={getRoutePage(path, 'en')} />;

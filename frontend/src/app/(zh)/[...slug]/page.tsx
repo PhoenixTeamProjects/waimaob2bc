@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { ProjectIndexPage } from '@/components/ui/ProjectIndexPage';
 import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
 import { getRoutePage, routePages } from '@/data/route-pages';
 import { createMetadata } from '@/lib/seo/metadata';
@@ -40,6 +41,10 @@ export default async function ZhTopicPage({
 }) {
   const { slug } = await params;
   const path = `/${slug.join('/')}/`;
+
+  if (path === '/projects/') {
+    return <ProjectIndexPage locale="zh" />;
+  }
 
   try {
     return <RouteLandingPage locale="zh" page={getRoutePage(path, 'zh')} />;

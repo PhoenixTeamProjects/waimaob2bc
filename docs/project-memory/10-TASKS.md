@@ -15,6 +15,7 @@
 - 补齐双语 SEO 第一阶段框架：canonical、hreflang metadata helper、`sitemap.xml`、`robots.txt`、`Person` 和 `WebSite` JSON-LD。
 - 建立双语面包屑框架：Breadcrumb UI 与 BreadcrumbList JSON-LD。
 - 建立博客第一阶段框架：双语文章数据源、文章列表、文章详情页、Article JSON-LD、文章 sitemap 收录。
+- 建立项目案例第一阶段框架：独立项目数据模型、项目案例列表页、空状态、录入标准、CollectionPage JSON-LD。
 
 ## 进行中
 
