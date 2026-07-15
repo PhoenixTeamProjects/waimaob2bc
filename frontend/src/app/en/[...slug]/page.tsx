@@ -1,5 +1,6 @@
 import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
 import { enRoutePages, getRoutePage } from '@/data/route-pages';
+import { createMetadata } from '@/lib/seo/metadata';
 
 const extraPages = [
   ['about'],
@@ -13,6 +14,54 @@ export function generateStaticParams() {
   }));
 
   return [...topicParams, ...extraPages.map((slug) => ({ slug }))];
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string[] }>;
+}) {
+  const { slug } = await params;
+  const path = `/${slug.join('/')}/`;
+
+  if (path === '/about/') {
+    return createMetadata({
+      title: 'About Phoenix',
+      description:
+        'Phoenix is a frontline foreign trade practitioner, business operator and trainer.',
+      path: '/en/about/',
+      locale: 'en'
+    });
+  }
+
+  if (path === '/contact/') {
+    return createMetadata({
+      title: 'Contact Phoenix',
+      description:
+        'Contact Phoenix for foreign trade practice, AI practice, website building, corporate training and consulting.',
+      path: '/en/contact/',
+      locale: 'en'
+    });
+  }
+
+  if (path === '/blog/') {
+    return createMetadata({
+      title: 'Practical Blog',
+      description:
+        'Practical notes from Phoenix on foreign trade, AI, websites and business execution.',
+      path: '/en/blog/',
+      locale: 'en'
+    });
+  }
+
+  const page = getRoutePage(path, 'en');
+
+  return createMetadata({
+    title: page.title,
+    description: page.description,
+    path: `/en${path}`,
+    locale: 'en'
+  });
 }
 
 export default async function EnglishCatchAllPage({

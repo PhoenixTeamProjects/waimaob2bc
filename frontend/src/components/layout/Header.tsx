@@ -24,8 +24,8 @@ function isItemActive(item: NavigationItem, pathname: string) {
   const currentPath = normalizePath(pathname);
   const itemPath = normalizePath(item.href);
 
-  if (itemPath === '/') {
-    return currentPath === '/';
+  if (itemPath === '/' || itemPath === '/en/') {
+    return currentPath === itemPath;
   }
 
   return currentPath === itemPath || currentPath.startsWith(itemPath);

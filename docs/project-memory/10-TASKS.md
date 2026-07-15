@@ -12,6 +12,7 @@
 - 读取并吸收 Phoenix 最新个人情况总纲，已将可公开资料整理进首页、关于页和项目记忆；敏感私人业务内容未进入公开代码与文档。
 - 按用户最终确认菜单完成页眉导航配置、桌面 Dropdown、移动 Accordion、active 高亮、课程咨询 CTA 和全部一级/二级专题路由页面。
 - 按通用框架中的多语言思想建立中英双语第一阶段框架：中文根路径、英文 `/en/` 路径、双语导航、语言切换、英文首页和英文专题页静态导出。
+- 补齐双语 SEO 第一阶段框架：canonical、hreflang metadata helper、`sitemap.xml`、`robots.txt`、`Person` 和 `WebSite` JSON-LD。
 
 ## 进行中
 

@@ -3,6 +3,15 @@ import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { profile } from '@/data/profile';
 import { enRoutePages } from '@/data/route-pages';
+import { createMetadata } from '@/lib/seo/metadata';
+
+export const metadata = createMetadata({
+  title: 'Phoenix Foreign Trade Practitioner',
+  description:
+    'Phoenix personal brand website for foreign trade practice, AI practice, website building, training and consulting.',
+  path: '/en/',
+  locale: 'en'
+});
 
 const featuredPages = enRoutePages.filter((page) =>
   ['/foreign-trade/', '/ai-practice/', '/website/', '/training/', '/projects/'].includes(
