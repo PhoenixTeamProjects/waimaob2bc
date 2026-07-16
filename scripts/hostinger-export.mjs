@@ -19,9 +19,8 @@ function syncDirectory(sourcePath, targetPath, label) {
 
 syncDirectory('frontend/.next', '.next', 'Next.js output');
 
-const staticExportTarget = resolve('out');
+syncDirectory('frontend/out', 'out', 'static export output');
 
-if (existsSync(staticExportTarget)) {
-  rmSync(staticExportTarget, { recursive: true, force: true });
-  console.log(`Hostinger stale static export removed: ${staticExportTarget}`);
+if (!existsSync(resolve('out/index.html'))) {
+  throw new Error(`Hostinger static export homepage not found: ${resolve('out/index.html')}`);
 }
