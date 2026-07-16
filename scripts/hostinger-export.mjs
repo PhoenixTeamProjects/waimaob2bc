@@ -17,8 +17,13 @@ function syncDirectory(sourcePath, targetPath, label) {
   console.log(`Hostinger ${label} synced: ${source} -> ${target}`);
 }
 
-syncDirectory('frontend/out', 'out', 'static export output');
+syncDirectory('frontend/out', '.next', 'static export output');
 
-if (!existsSync(resolve('out/index.html'))) {
-  throw new Error(`Hostinger static export homepage not found: ${resolve('out/index.html')}`);
+if (!existsSync(resolve('.next/index.html'))) {
+  throw new Error(`Hostinger static export homepage not found: ${resolve('.next/index.html')}`);
+}
+
+const publicSource = resolve('frontend/public');
+if (existsSync(publicSource)) {
+  syncDirectory('frontend/public', 'public', 'public assets');
 }
