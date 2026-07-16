@@ -4,6 +4,7 @@ import { JsonLd } from '@/components/ui/JsonLd';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { localizePath, type Locale } from '@/config/i18n';
 import { profile } from '@/data/profile';
+import { getMediaCoverage } from '@/data/media';
 import {
   createBreadcrumbStructuredData,
   getBreadcrumbs
@@ -66,6 +67,7 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
       ? '直到今天，我仍然在做客户开发、平台运营、独立站、海外社媒、AI 和自己的 SOHO 项目。我分享的，是自己真正做过的事情。'
       : 'Phoenix still works on customer development, platform operations, websites, overseas social media, AI and SOHO practice.';
   const breadcrumbs = getBreadcrumbs('/about/', locale, locale === 'zh' ? '关于我' : 'About');
+  const mediaCoverage = getMediaCoverage(locale);
 
   return (
     <section className="section page-section">
@@ -112,6 +114,30 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
           </section>
         </div>
 
+        <div className="content-band">
+          <div className="band-heading">
+            <p className="eyebrow">{locale === 'zh' ? '公开报道' : 'Public coverage'}</p>
+            <h2>{locale === 'zh' ? '媒体与官方平台公开信息' : 'Media and official-platform information'}</h2>
+            <p>
+              {locale === 'zh'
+                ? '以下资料按“直接提及”和“背景关联”区分，避免把未点名报道写成个人直接背书。'
+                : 'The following materials distinguish direct mentions from contextual coverage to avoid overstating evidence.'}
+            </p>
+          </div>
+          <div className="media-list-grid">
+            {mediaCoverage.map((item) => (
+              <a className="prose-card media-list-card" href={item.url} key={item.url} target="_blank" rel="noreferrer">
+                <span className={item.directlyMentionsPhoenix ? 'evidence-pill direct' : 'evidence-pill'}>
+                  {item.relation}
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.summary}</p>
+                <small>{item.source} · {item.publishedAt}</small>
+              </a>
+            ))}
+          </div>
+        </div>
+
         <div className="prose-card cta-card route-note">
           <div>
             <h2>{locale === 'zh' ? 'Phoenix 培训理念' : 'Training philosophy'}</h2>
@@ -130,4 +156,3 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
     </section>
   );
 }
-

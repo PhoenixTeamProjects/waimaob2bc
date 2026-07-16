@@ -9,6 +9,7 @@ import { HomeCTA } from './HomeCTA';
 import { HomeFlow } from './HomeFlow';
 import { HomeHero } from './HomeHero';
 import { HomeMatrix } from './HomeMatrix';
+import { HomeMediaCoverage } from './HomeMediaCoverage';
 import { HomeShowcase } from './HomeShowcase';
 import { HomeTrust } from './HomeTrust';
 import { homeCopy } from './home-content';
@@ -46,6 +47,7 @@ export function HomeExperience({
       <HomeShowcase copy={copy} locale={locale} posts={posts} />
       <HomeFlow copy={copy} locale={locale} />
       <HomeTrust copy={copy} metrics={localizedMetrics} />
+      <HomeMediaCoverage copy={copy} locale={locale} />
       <HomeCTA copy={copy} locale={locale} />
       <FilmGrain />
     </div>

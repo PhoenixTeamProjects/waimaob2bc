@@ -20,6 +20,9 @@ export type HomeCopy = {
   flowLead: string;
   trustEyebrow: string;
   trustTitle: string;
+  mediaEyebrow: string;
+  mediaTitle: string;
+  mediaLead: string;
   finalTitle: string;
   finalLead: string;
   blogCta: string;
@@ -51,6 +54,10 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       '先判断业务阶段，再搭建内容与获客系统，最后通过复盘让方法持续迭代。',
     trustEyebrow: 'Proof of Practice',
     trustTitle: '长期在一线执行，才知道工具和方法哪里真的有用',
+    mediaEyebrow: 'Public Evidence',
+    mediaTitle: '公开报道只做证据，不做过度包装',
+    mediaLead:
+      '与 Phoenix 相关的公开报道会按“直接提及”和“背景关联”分层展示：直接报道用于证明授课经历，基地与园区报道用于说明所在跨境电商生态。',
     finalTitle: '如果你想把外贸做得更系统，我们可以从一次诊断开始',
     finalLead:
       '无论你关注客户开发、AI 工作流、独立站还是团队培训，都可以先把当前问题讲清楚，再决定下一步。',
@@ -81,6 +88,10 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       'Start with the business stage, build the content and lead-generation system, then review and iterate.',
     trustEyebrow: 'Proof of Practice',
     trustTitle: 'Frontline execution is what separates useful methods from noise',
+    mediaEyebrow: 'Public Evidence',
+    mediaTitle: 'Public coverage as evidence, not over-packaging',
+    mediaLead:
+      'Public reports are separated into direct mentions and contextual industry coverage, so the site remains accurate and restrained.',
     finalTitle: 'If you want a more systematic foreign-trade engine, start with diagnosis',
     finalLead:
       'Whether your focus is customer development, AI workflows, websites or team training, the first step is to clarify the current bottleneck.',
