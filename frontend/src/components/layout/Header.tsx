@@ -49,7 +49,7 @@ export function Header() {
   }
 
   return (
-    <header className="site-header">
+    <header className={`site-header site-header-${locale}`}>
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Phoenix 首页">
           <span className="brand-mark">P</span>

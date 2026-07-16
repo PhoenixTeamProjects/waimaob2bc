@@ -54,9 +54,14 @@ a {
   min-height: 76px;
 }
 
+.site-header-en .header-inner {
+  gap: 20px;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 12px;
   margin-right: auto;
 }
@@ -81,9 +86,15 @@ a {
 .main-nav {
   display: flex;
   align-items: center;
+  flex: 0 1 auto;
   gap: 6px;
   color: var(--muted);
   font-size: 15px;
+}
+
+.site-header-en .main-nav {
+  gap: 3px;
+  font-size: 14px;
 }
 
 .nav-item {
@@ -96,9 +107,14 @@ a {
   gap: 5px;
   border-radius: 999px;
   padding: 9px 11px;
+  white-space: nowrap;
   transition:
     background 180ms ease,
     color 180ms ease;
+}
+
+.site-header-en .nav-link {
+  padding-inline: 9px;
 }
 
 .nav-link:hover,
@@ -165,6 +181,13 @@ a {
   padding: 10px 16px;
   background: var(--text);
   color: #fff;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.site-header-en .header-cta {
+  padding-inline: 14px;
+  font-size: 14px;
 }
 
 .language-switch {
@@ -177,9 +200,12 @@ a {
   color: var(--muted);
   font-size: 14px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .desktop-language {
+  flex: 0 0 auto;
+  min-width: 56px;
   padding: 9px 13px;
 }
 
