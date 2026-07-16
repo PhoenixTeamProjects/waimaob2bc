@@ -54,6 +54,36 @@ a {
   min-height: 76px;
 }
 
+.topbar {
+  border-bottom: 1px solid rgba(230, 232, 239, 0.72);
+  font-size: 13px;
+}
+
+.topbar-inner {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--muted);
+}
+
+.topbar-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 700;
+}
+
+.topbar-links a {
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+
+.topbar-links a:hover {
+  color: var(--brand-dark);
+}
+
 .site-header-en .header-inner {
   gap: 20px;
 }
@@ -631,6 +661,19 @@ h1 {
     gap: 14px;
   }
 
+  .topbar-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .topbar-links {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-size: 12px;
+  }
+
   .desktop-nav,
   .desktop-cta,
   .desktop-language {
@@ -779,6 +822,23 @@ body {
   background: linear-gradient(180deg, rgba(18, 14, 24, 0.72), rgba(18, 14, 24, 0.42));
   color: rgba(255, 250, 243, 0.86);
   backdrop-filter: blur(22px) saturate(1.12);
+}
+
+.site-header .topbar {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.site-header .topbar-inner {
+  color: rgba(255, 250, 243, 0.62);
+}
+
+.site-header .topbar-links a {
+  color: rgba(255, 250, 243, 0.82);
+}
+
+.site-header .topbar-links a:hover {
+  color: #fffaf3;
 }
 
 .brand-mark {

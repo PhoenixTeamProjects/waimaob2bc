@@ -50,6 +50,15 @@ export function Header() {
 
   return (
     <header className={`site-header site-header-${locale}`}>
+      <div className="topbar" aria-label={locale === 'zh' ? '联系信息' : 'Contact information'}>
+        <div className="container topbar-inner">
+          <span>{locale === 'zh' ? '欢迎交流外贸、AI 与建站实战' : 'Foreign trade, AI and website practice'}</span>
+          <div className="topbar-links">
+            <a href="mailto:support@waimaob2bc.com">support@waimaob2bc.com</a>
+            <a href="tel:18191027863">18191027863</a>
+          </div>
+        </div>
+      </div>
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Phoenix 首页">
           <span className="brand-mark">P</span>
