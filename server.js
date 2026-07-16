@@ -1,1 +1,0 @@
-require('./.next/server.js');
