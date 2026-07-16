@@ -12,12 +12,12 @@ export function createArticleStructuredData(post: Post, path: string) {
     inLanguage: post.locale === 'zh' ? 'zh-CN' : 'en',
     author: {
       '@type': 'Person',
-      name: 'Phoenix',
+      name: '吕斌（Phoenix）',
       url: siteConfig.url
     },
     publisher: {
       '@type': 'Person',
-      name: 'Phoenix',
+      name: '吕斌（Phoenix）',
       url: siteConfig.url
     },
     mainEntityOfPage: new URL(path, siteConfig.url).toString(),

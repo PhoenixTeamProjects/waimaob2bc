@@ -16,7 +16,7 @@ const directContacts = {
 };
 
 export function ContactPageContent({ locale }: { locale: Locale }) {
-  const title = locale === 'zh' ? '联系我' : 'Contact Phoenix';
+  const title = locale === 'zh' ? '联系我' : 'Contact Lv Bin / Phoenix';
   const description =
     locale === 'zh'
       ? '适合咨询外贸运营、AI实战、建站、企业内训、一对一辅导和商务合作。'

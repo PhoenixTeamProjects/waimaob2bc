@@ -1,5 +1,6 @@
 export const profile = {
-  name: 'Phoenix',
+  name: '吕斌',
+  brandName: 'Phoenix',
   title: '外贸实战操盘手',
   subtitle: 'Foreign Trade Practitioner & B2B Growth Operator',
   principles: ['真实', '实战', '一线', '持续执行', '持续测试'],
@@ -15,6 +16,7 @@ export const profile = {
     { value: '多行业', label: '真实企业培训与业务实践' }
   ],
   experience: [
+    '吕斌曾任沣东跨境电商直播基地外贸总监、讲师及股东，深度参与基地从 0 到 1 的建设、运营和培训体系搭建。',
     '曾参与和经营跨境电商及外贸公司。',
     '曾担任外贸负责人、企业管理者和外贸业务负责人等角色。',
     '长期参与海外市场、客户开发、外贸运营、独立站、海外社媒、AI 工作流和企业海外业务体系建设。'

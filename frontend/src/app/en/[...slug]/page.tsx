@@ -26,9 +26,9 @@ export async function generateMetadata({
 
   if (path === '/about/') {
     return createMetadata({
-      title: 'About Phoenix',
+      title: 'About Lv Bin / Phoenix',
       description:
-        'Phoenix is a frontline foreign trade practitioner, business operator and trainer.',
+        'Lv Bin, also known as Phoenix, is a frontline foreign trade practitioner, business operator and trainer.',
       path: '/en/about/',
       locale: 'en'
     });
@@ -36,9 +36,9 @@ export async function generateMetadata({
 
   if (path === '/contact/') {
     return createMetadata({
-      title: 'Contact Phoenix',
+      title: 'Contact Lv Bin / Phoenix',
       description:
-        'Contact Phoenix for foreign trade practice, AI practice, website building, corporate training and consulting.',
+        'Contact Lv Bin / Phoenix for foreign trade practice, AI practice, website building, corporate training and consulting.',
       path: '/en/contact/',
       locale: 'en'
     });

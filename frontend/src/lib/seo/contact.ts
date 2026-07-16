@@ -5,7 +5,7 @@ export function createContactPageStructuredData(path: string, locale: Locale) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: locale === 'zh' ? '联系 Phoenix' : 'Contact Phoenix',
+    name: locale === 'zh' ? '联系吕斌（Phoenix）' : 'Contact Lv Bin / Phoenix',
     description:
       locale === 'zh'
         ? '用于课程咨询、企业内训、一对一辅导、外贸运营、AI实战、建站和商务合作咨询。'
@@ -14,7 +14,7 @@ export function createContactPageStructuredData(path: string, locale: Locale) {
     url: new URL(path, siteConfig.url).toString(),
     about: {
       '@type': 'Person',
-      name: 'Phoenix',
+      name: '吕斌（Phoenix）',
       url: siteConfig.url
     }
   };

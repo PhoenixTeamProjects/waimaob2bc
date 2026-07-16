@@ -5,11 +5,11 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Phoenix',
+    name: '吕斌（Phoenix）',
     url: siteConfig.url,
     jobTitle: 'Foreign Trade Practitioner & B2B Growth Operator',
     description:
-      'Phoenix is a frontline foreign trade practitioner, business operator and trainer focused on foreign trade operations, AI practice, website building and practical training.'
+      '吕斌（Phoenix）是外贸实战操盘手、企业经营者和讲师，专注外贸运营、AI实战、建站和实战培训。'
   },
   {
     '@context': 'https://schema.org',
@@ -19,7 +19,7 @@ const structuredData = [
     inLanguage: ['zh-CN', 'en'],
     publisher: {
       '@type': 'Person',
-      name: 'Phoenix'
+      name: '吕斌（Phoenix）'
     }
   }
 ];

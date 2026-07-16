@@ -13,8 +13,8 @@ import {
 const aboutSections = {
   zh: [
     {
-      title: 'Phoenix 是谁',
-      body: '一个长期在外贸、企业经营、团队管理、培训交付和数字化工具里来回切换的一线操盘手。'
+      title: '吕斌是谁',
+      body: '吕斌，英文品牌名 Phoenix，一个长期在外贸、企业经营、团队管理、培训交付和数字化工具里来回切换的一线操盘手。'
     },
     {
       title: '为什么做外贸',
@@ -22,7 +22,11 @@ const aboutSections = {
     },
     {
       title: '从创业经营，到外贸一线',
-      body: '疫情以前，Phoenix 曾在深圳和长沙参与跨境电商及外贸公司经营；回到西安后，又持续参与外贸基地、贸易公司、工业科技公司和企业外贸部门的管理与实战。'
+      body: '疫情以前，吕斌曾在深圳和长沙参与跨境电商及外贸公司经营；回到西安后，又持续参与外贸基地、贸易公司、工业科技公司和企业外贸部门的管理与实战。'
+    },
+    {
+      title: '沣东跨境电商直播基地经历',
+      body: '吕斌曾任沣东跨境电商直播基地外贸总监、讲师及股东，深度参与基地从 0 到 1 的建设、运营和培训体系搭建。基地及园区后续获得官方平台和权威媒体公开报道。'
     },
     {
       title: '为什么研究 AI',
@@ -35,8 +39,8 @@ const aboutSections = {
   ],
   en: [
     {
-      title: 'Who Phoenix is',
-      body: 'A frontline practitioner moving between foreign trade, business operations, team management, training delivery and digital tools.'
+      title: 'Who Lv Bin / Phoenix is',
+      body: 'Lv Bin, also known by the brand name Phoenix, is a frontline practitioner moving between foreign trade, business operations, team management, training delivery and digital tools.'
     },
     {
       title: 'Why foreign trade',
@@ -44,7 +48,11 @@ const aboutSections = {
     },
     {
       title: 'From business operation to frontline practice',
-      body: 'Phoenix has participated in cross-border and foreign-trade company operations and later continued working across trade bases, companies and industrial business teams.'
+      body: 'Lv Bin has participated in cross-border and foreign-trade company operations and later continued working across trade bases, companies and industrial business teams.'
+    },
+    {
+      title: 'Fengdong base experience',
+      body: 'Lv Bin served as foreign trade director, lecturer and shareholder at Fengdong Cross-border E-commerce Live Streaming Base, deeply participating in its development, operation and training system from zero to one.'
     },
     {
       title: 'Why AI',
@@ -64,8 +72,8 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
       : 'I am not a trainer who has left the frontline';
   const description =
     locale === 'zh'
-      ? '直到今天，我仍然在做客户开发、平台运营、独立站、海外社媒、AI 和自己的 SOHO 项目。我分享的，是自己真正做过的事情。'
-      : 'Phoenix still works on customer development, platform operations, websites, overseas social media, AI and SOHO practice.';
+      ? '我是吕斌，英文品牌名 Phoenix。直到今天，我仍然在做客户开发、平台运营、独立站、海外社媒、AI 和自己的 SOHO 项目。我分享的，是自己真正做过的事情。'
+      : 'I am Lv Bin, also known as Phoenix. I still work on customer development, platform operations, websites, overseas social media, AI and SOHO practice.';
   const breadcrumbs = getBreadcrumbs('/about/', locale, locale === 'zh' ? '关于我' : 'About');
   const mediaCoverage = getMediaCoverage(locale);
 
@@ -75,7 +83,7 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
       <Container>
         <Breadcrumbs items={breadcrumbs} />
         <div className="page-hero-panel">
-          <SectionHeading eyebrow="About Phoenix" title={title} description={description} />
+          <SectionHeading eyebrow="About Lv Bin / Phoenix" title={title} description={description} />
           <div className="trust-mini-grid">
             {profile.trustMetrics.map((metric) => (
               <div className="metric-card" key={metric.label}>
@@ -120,8 +128,8 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
             <h2>{locale === 'zh' ? '媒体与官方平台公开信息' : 'Media and official-platform information'}</h2>
             <p>
               {locale === 'zh'
-                ? '以下资料按“直接提及”和“背景关联”区分，避免把未点名报道写成个人直接背书。'
-                : 'The following materials distinguish direct mentions from contextual coverage to avoid overstating evidence.'}
+                ? '以下资料按“直接提及吕斌”和“吕斌深度参与建设的平台/产业生态报道”区分，既突出个人真实经历，也保持证据链准确。'
+                : 'The following materials distinguish direct mentions of Lv Bin from reports about the platform and ecosystem he helped build, keeping the evidence strong and accurate.'}
             </p>
           </div>
           <div className="media-list-grid">
@@ -140,7 +148,7 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
 
         <div className="prose-card cta-card route-note">
           <div>
-            <h2>{locale === 'zh' ? 'Phoenix 培训理念' : 'Training philosophy'}</h2>
+            <h2>{locale === 'zh' ? '吕斌的培训理念' : 'Lv Bin’s training philosophy'}</h2>
             <p>{profile.trainingPhilosophy}</p>
             <p>
               {locale === 'zh'

@@ -55,9 +55,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     trustEyebrow: 'Proof of Practice',
     trustTitle: '长期在一线执行，才知道工具和方法哪里真的有用',
     mediaEyebrow: 'Public Evidence',
-    mediaTitle: '公开报道只做证据，不做过度包装',
+    mediaTitle: '吕斌的公开报道与项目背书',
     mediaLead:
-      '与 Phoenix 相关的公开报道会按“直接提及”和“背景关联”分层展示：直接报道用于证明授课经历，基地与园区报道用于说明所在跨境电商生态。',
+      '公开报道会按“直接提及吕斌”和“吕斌深度参与建设的平台/产业生态报道”分层展示：既呈现个人授课经历，也呈现沣东跨境电商直播基地从 0 到 1 的真实项目背书。',
     finalTitle: '如果你想把外贸做得更系统，我们可以从一次诊断开始',
     finalLead:
       '无论你关注客户开发、AI 工作流、独立站还是团队培训，都可以先把当前问题讲清楚，再决定下一步。',
@@ -89,9 +89,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     trustEyebrow: 'Proof of Practice',
     trustTitle: 'Frontline execution is what separates useful methods from noise',
     mediaEyebrow: 'Public Evidence',
-    mediaTitle: 'Public coverage as evidence, not over-packaging',
+    mediaTitle: 'Public coverage and project evidence for Lv Bin',
     mediaLead:
-      'Public reports are separated into direct mentions and contextual industry coverage, so the site remains accurate and restrained.',
+      'Public reports are separated into direct mentions of Lv Bin and reports about the platform and ecosystem he helped build, keeping the personal evidence strong and accurate.',
     finalTitle: 'If you want a more systematic foreign-trade engine, start with diagnosis',
     finalLead:
       'Whether your focus is customer development, AI workflows, websites or team training, the first step is to clarify the current bottleneck.',

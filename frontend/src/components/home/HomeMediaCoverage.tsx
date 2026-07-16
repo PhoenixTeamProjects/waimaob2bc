@@ -28,7 +28,7 @@ export function HomeMediaCoverage({ copy, locale }: { copy: HomeCopy; locale: Lo
               <Reveal>
                 <LiquidGlass className="media-feature-card">
                   <p className="media-badge">
-                    {locale === 'zh' ? '直接报道' : 'Direct coverage'}
+                    {locale === 'zh' ? '直接提及吕斌' : 'Directly mentions Lv Bin'}
                   </p>
                   <h3>{direct.title}</h3>
                   <p>{direct.summary}</p>
@@ -38,7 +38,7 @@ export function HomeMediaCoverage({ copy, locale }: { copy: HomeCopy; locale: Lo
                     <span>{direct.relation}</span>
                   </div>
                   <Link className="text-link" href={direct.url} target="_blank" rel="noreferrer">
-                    {locale === 'zh' ? '查看官方报道' : 'View official report'}
+                  {locale === 'zh' ? '查看官方报道' : 'View official report'}
                   </Link>
                 </LiquidGlass>
               </Reveal>
@@ -47,7 +47,7 @@ export function HomeMediaCoverage({ copy, locale }: { copy: HomeCopy; locale: Lo
             <Reveal>
               <LiquidGlass className="media-context-card">
                 <p className="media-badge">
-                  {locale === 'zh' ? '背景关联' : 'Context'}
+                  {locale === 'zh' ? '参与建设的平台报道' : 'Platform coverage'}
                 </p>
                 <div className="media-context-list">
                   {contextual.map((item) => (
@@ -66,4 +66,3 @@ export function HomeMediaCoverage({ copy, locale }: { copy: HomeCopy; locale: Lo
     </section>
   );
 }
-

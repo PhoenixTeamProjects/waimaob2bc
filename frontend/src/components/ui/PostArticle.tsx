@@ -47,7 +47,7 @@ export function PostArticle({ post, locale }: { post: Post; locale: Locale }) {
             <span>
               {post.readingMinutes} {locale === 'zh' ? '分钟阅读' : 'min read'}
             </span>
-            <span>{locale === 'zh' ? '作者 Phoenix' : 'Author Phoenix'}</span>
+            <span>{locale === 'zh' ? '作者 吕斌（Phoenix）' : 'Author Lv Bin / Phoenix'}</span>
           </div>
           <p className="tag-row">
             {post.tags.map((tag) => (
@@ -78,8 +78,8 @@ export function PostArticle({ post, locale }: { post: Post; locale: Locale }) {
             <h2>{locale === 'zh' ? '关于作者' : 'About the author'}</h2>
             <p>
               {locale === 'zh'
-                ? 'Phoenix 是外贸实战操盘手，长期记录客户开发、外贸运营、AI、建站、SOHO 和课程培训中的真实过程。'
-                : 'Phoenix is a frontline foreign-trade practitioner documenting customer development, AI, websites, SOHO practice and training.'}
+                ? '吕斌（Phoenix）是外贸实战操盘手，长期记录客户开发、外贸运营、AI、建站、SOHO 和课程培训中的真实过程。'
+                : 'Lv Bin, also known as Phoenix, is a frontline foreign-trade practitioner documenting customer development, AI, websites, SOHO practice and training.'}
             </p>
           </section>
           <section className="prose-card">

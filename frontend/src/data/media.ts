@@ -44,12 +44,12 @@ export const mediaCoverageItems: MediaCoverageItem[] = [
     publishedAt: '2024-01-04',
     url: 'http://www.xixianxinqu.gov.cn/xwzx/xcdt/1742849035114979329.html',
     relation: {
-      zh: '基地背景报道，未直接点名吕斌',
-      en: 'Base background report; does not directly name Lv Bin'
+      zh: '吕斌深度参与建设的平台报道，未直接点名吕斌',
+      en: 'Report on the platform Lv Bin helped build; does not directly name Lv Bin'
     },
     summary: {
-      zh: '报道介绍沣东跨境电商直播基地正式运营，以及 TikTok 跨境直播、海外仓、供应链与跨境电商服务体系。',
-      en: 'The report introduces the base operation, TikTok cross-border livestreaming, overseas warehouse, supply chain and cross-border e-commerce service system.'
+      zh: '报道介绍沣东跨境电商直播基地正式运营，以及 TikTok 跨境直播、海外仓、供应链与跨境电商服务体系。该基地是吕斌深度参与从 0 到 1 建设和运营的真实平台。',
+      en: 'The report introduces the base operation, TikTok cross-border livestreaming, overseas warehouse, supply chain and cross-border e-commerce service system. It is a real platform Lv Bin deeply participated in building and operating from zero to one.'
     },
     directlyMentionsPhoenix: false
   },
@@ -65,8 +65,8 @@ export const mediaCoverageItems: MediaCoverageItem[] = [
     publishedAt: '2024-01-30',
     url: 'https://www.yidaiyilu.gov.cn/p/027R5MHO.html',
     relation: {
-      zh: '沣东跨境直播基地产业背景，未直接点名吕斌',
-      en: 'Industry background of Fengdong base; does not directly name Lv Bin'
+      zh: '吕斌参与建设的基地产业生态报道，未直接点名吕斌',
+      en: 'Ecosystem report on the base Lv Bin helped build; does not directly name Lv Bin'
     },
     summary: {
       zh: '国家级平台转载陕西日报报道，介绍沣东跨境电商直播基地通过“线下物流 + 线上直播”促进区域数字贸易发展。',
@@ -86,8 +86,8 @@ export const mediaCoverageItems: MediaCoverageItem[] = [
     publishedAt: '2024-10-11',
     url: 'http://www.xixianxinqu.gov.cn/xwzx/xcdt/1844669302540140545.html',
     relation: {
-      zh: '沣东跨境电商产业生态背景，未直接点名吕斌',
-      en: 'Fengdong cross-border e-commerce ecosystem background; does not directly name Lv Bin'
+      zh: '沣东跨境电商产业生态报道，未直接点名吕斌',
+      en: 'Fengdong cross-border e-commerce ecosystem report; does not directly name Lv Bin'
     },
     summary: {
       zh: '报道呈现沣东新城跨境电商、直播电商和产业基地扩容背景，可作为区域产业生态佐证。',
@@ -107,11 +107,11 @@ export const mediaCoverageItems: MediaCoverageItem[] = [
     publishedAt: '2025-08-03',
     url: 'http://fdxc.xixianxinqu.gov.cn/xwzx/mtjj/1967478371675312130.html',
     relation: {
-      zh: '同区域 AI 与跨境电商产业生态背景，未直接点名吕斌',
-      en: 'Same regional AI and cross-border e-commerce ecosystem background; does not directly name Lv Bin'
+      zh: '同区域 AI 与跨境电商产业生态报道，未直接点名吕斌',
+      en: 'Same regional AI and cross-border e-commerce ecosystem report; does not directly name Lv Bin'
     },
     summary: {
-      zh: '报道用于说明沣东新城跨境电商与 AI 人才孵化生态，不作为 Phoenix 个人直接报道。',
+      zh: '报道用于说明沣东新城跨境电商与 AI 人才孵化生态，不作为吕斌个人直接报道。',
       en: 'The report is used to describe Fengdong’s cross-border e-commerce and AI talent incubation ecosystem, not as direct personal coverage.'
     },
     directlyMentionsPhoenix: false
