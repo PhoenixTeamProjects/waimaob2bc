@@ -18,9 +18,3 @@ function syncDirectory(sourcePath, targetPath, label) {
 }
 
 syncDirectory('frontend/.next', '.next', 'Next.js output');
-
-syncDirectory('frontend/out', 'out', 'static export output');
-
-if (!existsSync(resolve('out/index.html'))) {
-  throw new Error(`Hostinger static export homepage not found: ${resolve('out/index.html')}`);
-}
