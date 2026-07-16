@@ -1,3 +1,4 @@
+import { AboutPageContent } from '@/components/ui/AboutPageContent';
 import { ContactPageContent } from '@/components/ui/ContactPageContent';
 import { ProjectIndexPage } from '@/components/ui/ProjectIndexPage';
 import { RouteLandingPage } from '@/components/ui/RouteLandingPage';
@@ -62,25 +63,7 @@ export default async function EnglishCatchAllPage({
   const path = `/${slug.join('/')}/`;
 
   if (path === '/about/') {
-    return (
-      <RouteLandingPage
-        locale="en"
-        page={{
-          path,
-          eyebrow: 'About Phoenix',
-          title: 'I am not a trainer who has left the frontline',
-          description:
-            'Phoenix is a foreign-trade practitioner, business operator and trainer who still works on customer development, platform operations, websites, social media, AI and SOHO projects.',
-          points: [
-            'Operated cross-border and foreign-trade companies',
-            'Worked as foreign-trade director and company CEO',
-            'Trained or served 200+ companies',
-            'Trained 1,000+ students',
-            'Shares only real practice and review'
-          ]
-        }}
-      />
-    );
+    return <AboutPageContent locale="en" />;
   }
 
   if (path === '/contact/') {
