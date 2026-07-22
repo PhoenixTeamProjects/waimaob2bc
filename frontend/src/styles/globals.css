@@ -1422,9 +1422,34 @@ h1 {
 ========================================================= */
 
 .executive-home {
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
-  background: #f4f7fb;
+  background: #08111f;
   color: #111827;
+}
+
+.executive-home .cinematic-world {
+  z-index: 0;
+  opacity: 0.92;
+}
+
+.executive-home .particle-canvas {
+  z-index: 1;
+  opacity: 0.68;
+}
+
+.executive-home .cursor-aura {
+  z-index: 2;
+}
+
+.executive-home .film-grain {
+  z-index: 8;
+}
+
+.executive-home > section {
+  position: relative;
+  z-index: 3;
 }
 
 .executive-hero {
@@ -1432,9 +1457,9 @@ h1 {
   overflow: hidden;
   padding: clamp(72px, 8vw, 118px) 0 clamp(60px, 7vw, 96px);
   background:
-    linear-gradient(135deg, rgba(7, 12, 27, 0.92), rgba(12, 24, 52, 0.94)),
+    linear-gradient(135deg, rgba(7, 12, 27, 0.72), rgba(12, 24, 52, 0.78)),
     radial-gradient(circle at 20% 12%, rgba(37, 99, 235, 0.55), transparent 36%),
-    #070c1b;
+    linear-gradient(180deg, rgba(7, 12, 27, 0.15), rgba(7, 12, 27, 0.62));
   color: #f8fafc;
 }
 
@@ -1611,7 +1636,9 @@ h1 {
 }
 
 .executive-section-dark {
-  background: #08111f;
+  background:
+    linear-gradient(180deg, rgba(8, 17, 31, 0.9), rgba(8, 17, 31, 0.96)),
+    transparent;
   color: #f8fafc;
 }
 
@@ -1903,7 +1930,7 @@ h1 {
   padding: clamp(72px, 8vw, 112px) 0;
   background:
     radial-gradient(circle at 12% 20%, rgba(59, 130, 246, 0.22), transparent 34%),
-    #08111f;
+    linear-gradient(135deg, rgba(8, 17, 31, 0.92), rgba(15, 23, 42, 0.88));
   color: #f8fafc;
 }
 

@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { localizePath, type Locale } from '@/config/i18n';
+import { CinematicBackground } from '@/components/visual/CinematicBackground';
+import { CursorAura } from '@/components/visual/CursorAura';
+import { FilmGrain } from '@/components/visual/FilmGrain';
+import { ParticleCanvas } from '@/components/visual/ParticleCanvas';
 import { getMediaCoverage } from '@/data/media';
 import { profile } from '@/data/profile';
 import type { Post } from '@/types/content';
@@ -112,6 +116,9 @@ export function HomeExperience({
 
   return (
     <main className="executive-home">
+      <CinematicBackground />
+      <ParticleCanvas />
+      <CursorAura />
       <section className="executive-hero">
         <div className="executive-orb executive-orb-left" aria-hidden="true" />
         <div className="executive-orb executive-orb-right" aria-hidden="true" />
@@ -302,6 +309,7 @@ export function HomeExperience({
           </div>
         </div>
       </section>
+      <FilmGrain />
     </main>
   );
 }
