@@ -115,7 +115,7 @@ export function HomeExperience({
   const prefix = locale === 'zh' ? '' : '/en';
 
   return (
-    <main className="executive-home">
+    <main className="immersive-home executive-home">
       <CinematicBackground />
       <ParticleCanvas />
       <CursorAura />
