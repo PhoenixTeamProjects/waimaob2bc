@@ -1425,13 +1425,17 @@ h1 {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #08111f;
-  color: #111827;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(96, 165, 250, 0.16), transparent 30%),
+    radial-gradient(circle at 78% 18%, rgba(20, 184, 166, 0.12), transparent 32%),
+    #070b13;
+  color: #f8fafc;
 }
 
 .executive-home .cinematic-world {
   z-index: 0;
-  opacity: 0.92;
+  opacity: 0.95;
 }
 
 .executive-home .particle-canvas {
@@ -1457,9 +1461,9 @@ h1 {
   overflow: hidden;
   padding: clamp(72px, 8vw, 118px) 0 clamp(60px, 7vw, 96px);
   background:
-    linear-gradient(135deg, rgba(7, 12, 27, 0.72), rgba(12, 24, 52, 0.78)),
-    radial-gradient(circle at 20% 12%, rgba(37, 99, 235, 0.55), transparent 36%),
-    linear-gradient(180deg, rgba(7, 12, 27, 0.15), rgba(7, 12, 27, 0.62));
+    linear-gradient(135deg, rgba(7, 12, 27, 0.48), rgba(12, 24, 52, 0.62)),
+    radial-gradient(circle at 20% 12%, rgba(37, 99, 235, 0.38), transparent 36%),
+    linear-gradient(180deg, rgba(7, 12, 27, 0.05), rgba(7, 12, 27, 0.54));
   color: #f8fafc;
 }
 
@@ -1527,7 +1531,9 @@ h1 {
 
 .executive-copy h1 {
   max-width: 900px;
-  font-size: clamp(48px, 7vw, 94px);
+  color: #fffaf3;
+  font-size: clamp(46px, 6.4vw, 88px);
+  text-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
 }
 
 .executive-lead {
@@ -1632,18 +1638,23 @@ h1 {
 
 .executive-section {
   padding: clamp(70px, 8vw, 112px) 0;
-  background: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(7, 11, 19, 0.78), rgba(7, 11, 19, 0.88)),
+    transparent;
+  color: #f8fafc;
 }
 
 .executive-section-dark {
   background:
-    linear-gradient(180deg, rgba(8, 17, 31, 0.9), rgba(8, 17, 31, 0.96)),
+    linear-gradient(180deg, rgba(8, 17, 31, 0.72), rgba(8, 17, 31, 0.9)),
     transparent;
   color: #f8fafc;
 }
 
 .executive-section-muted {
-  background: #f4f7fb;
+  background:
+    linear-gradient(180deg, rgba(12, 18, 31, 0.78), rgba(12, 18, 31, 0.9)),
+    transparent;
 }
 
 .executive-section-head {
@@ -1659,14 +1670,16 @@ h1 {
 .base-proof-copy h2,
 .executive-final-card h2 {
   max-width: 920px;
-  font-size: clamp(38px, 5vw, 70px);
+  color: #fffaf3;
+  font-size: clamp(36px, 4.7vw, 64px);
+  text-shadow: 0 16px 54px rgba(0, 0, 0, 0.34);
 }
 
 .executive-section-head p:not(.executive-kicker),
 .base-proof-copy p,
 .executive-final-card p {
   margin-top: 18px;
-  color: #64748b;
+  color: rgba(248, 250, 252, 0.72);
   font-size: 18px;
 }
 
@@ -1725,8 +1738,10 @@ h1 {
 .base-proof-section {
   padding: clamp(72px, 8vw, 118px) 0;
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.04), transparent 34%),
-    #f8fafc;
+    radial-gradient(circle at 18% 18%, rgba(96, 165, 250, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(8, 13, 24, 0.72), rgba(8, 13, 24, 0.88)),
+    transparent;
+  color: #f8fafc;
 }
 
 .base-proof-grid {
@@ -1746,9 +1761,14 @@ h1 {
 .battle-card,
 .reader-paths a,
 .executive-post-card {
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.055)),
+    rgba(8, 14, 30, 0.52);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.18),
+    0 24px 80px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px) saturate(1.14);
 }
 
 .official-report-card {
@@ -1757,8 +1777,9 @@ h1 {
   border-radius: 30px;
   padding: clamp(24px, 4vw, 38px);
   background:
-    radial-gradient(circle at 90% 12%, rgba(37, 99, 235, 0.12), transparent 32%),
-    #ffffff;
+    radial-gradient(circle at 90% 12%, rgba(96, 165, 250, 0.22), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06)),
+    rgba(8, 14, 30, 0.58);
 }
 
 .official-report-card span {
@@ -1772,13 +1793,14 @@ h1 {
 }
 
 .official-report-card strong {
+  color: #fffaf3;
   font-size: clamp(28px, 4vw, 52px);
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
 
 .official-report-card p {
-  color: #64748b;
+  color: rgba(248, 250, 252, 0.72);
 }
 
 .platform-report-list {
@@ -1795,11 +1817,12 @@ h1 {
 }
 
 .platform-report-list strong {
+  color: #fffaf3;
   font-size: 16px;
 }
 
 .platform-report-list span {
-  color: #64748b;
+  color: rgba(248, 250, 252, 0.62);
   font-size: 13px;
 }
 
@@ -1822,7 +1845,9 @@ h1 {
 }
 
 .battle-card:hover {
-  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.13);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.2),
+    0 30px 90px rgba(0, 0, 0, 0.3);
   transform: translateY(-3px);
 }
 
@@ -1830,13 +1855,13 @@ h1 {
   grid-row: span 2;
   min-height: 494px;
   background:
-    radial-gradient(circle at 88% 10%, rgba(37, 99, 235, 0.14), transparent 32%),
-    #0f172a;
+    radial-gradient(circle at 88% 10%, rgba(96, 165, 250, 0.26), transparent 32%),
+    rgba(15, 23, 42, 0.76);
   color: #f8fafc;
 }
 
 .battle-card span {
-  color: #2563eb;
+  color: #60a5fa;
   font-weight: 900;
 }
 
@@ -1846,13 +1871,14 @@ h1 {
 
 .battle-card h3 {
   margin: 0;
+  color: #fffaf3;
   font-size: clamp(24px, 3vw, 38px);
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
 
 .battle-card p {
-  color: #64748b;
+  color: rgba(248, 250, 252, 0.68);
 }
 
 .battle-card-feature p {
@@ -1880,13 +1906,13 @@ h1 {
 }
 
 .reader-paths span {
-  color: #64748b;
+  color: rgba(248, 250, 252, 0.62);
   font-size: 14px;
   font-weight: 800;
 }
 
 .reader-paths strong {
-  color: #0f172a;
+  color: #fffaf3;
   font-size: 28px;
   line-height: 1.1;
 }
@@ -1913,16 +1939,17 @@ h1 {
 
 .executive-post-card h3 {
   margin: 0;
+  color: #fffaf3;
   font-size: 24px;
   line-height: 1.18;
 }
 
 .executive-post-card span {
-  color: #64748b;
+  color: rgba(248, 250, 252, 0.66);
 }
 
 .executive-post-card a {
-  color: #1d4ed8;
+  color: #93c5fd;
   font-weight: 900;
 }
 
